@@ -1,9 +1,13 @@
 package org.example;
 import org.joda.time.Days;
 import org.joda.time.LocalDate;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@Configuration
+@PropertySource(value = "classpath:application.properties")
 @RestController
 public class MyController {
     @GetMapping("/")
